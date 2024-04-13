@@ -1,0 +1,934 @@
+1.What is ERP ? 
+ERP - Enterprise Resource Planning .
+ERP is A type of software that organisations use to manage day to day activities (supply chain management , financial management)
+Modules - Supply chain management - cost management , shipping / receiveing
+	    financial management - general ledger , accounts payable 
+	    human capital management - 
+          project porfolio management - project costing/billing
+	    customer relationship management - sales , marketing
+	    procurement - purchasing ,supplier total 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Oracle E-Business Suite (EBS) is a suite of integrated applications that helps organizations manage various aspects of their business, 
+including order management, logistics, procurement, projects, manufacturing, asset lifecycle management, service, and financials.
+
+Modules:
+Finance and accounting module
+procurement module
+manufacturing module
+inventory mgmt module
+order mgmt module
+supply chain mgmt
+customer relationship msgt
+human resources module
+
+2.What are the different types of ERP applications ?
+
+3.Types of ERP Products:
+SAP/Oracle EBS(E BusIness SUite )/Peoplesoft /Workday /Salesforce
+
+Goals of ERP:
+1.Reducing operational costs
+2.Reducing inventory
+3.standardize and speed up operational process
+4.integrate financial info.
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Different types of roles in ERP. ( 3 roles)
+1.Oracle apps DBA (roles -  database backup and cloning support , define multiple instances (development + testing + production)
+2.Oracle Application Functional Consultant ( interacting with the client , explaining about product to the client , need high communication skills ,presentation,documentation skills))
+3.Oracle Application Technical Consultant ( receive the FD from client ,
+get through the document and understand the requirement ,
+prepare TD(technical document) , develop the product , test the product and move it to the production team )
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+RICE -  
+Full form : Reports Interfaces Conversions Extensions.
+To meet the client requierements , a funcitonal and technical consultant need to make changes to the original ERP System, 
+the changes made to the Original ERP System comes under RICE.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Different types of projects in Oracle ?
+Implemenataions type
+Migration types
+Customization types
+Support and Maintainence
+
+
+----------------------------------------------------------------------------------------------------------------------
+What is AOL ?
+AOL: Application Object Library
+AOL - AOL provides common functionality of all Ebusiness suite products 
+through a library of reusable objects,programs and codes.
+It Consists of 2 responsibilities:
+1.System administrator
+2.Application developer
+
+System administrator : creation of users /security groups /responsibilites,
+programs and reports 
+Application developer : forms deployment , menus and submenu function , form function ,
+AOL messages, custom application creation, tables regs.
+
+-----------------------------------------------------------------------------------------------------
+How to create user in Oracle Applications?
+
+NB: Deployment of report is done in Oracle Applications and Report publishing is done in BI Publisher.
+
+Different types of executable in Oracle Apps :
+Java concurrent program
+Multi - language function
+Oracle reports
+PL/SQl Stored procedure
+Sql Loader
+Sql Plus
+Host
+----------------------------------------------------------------------------------------------------
+Differnt types of reports in Oracle Applications : 3 types
+Oracle Reports
+XML Publisher
+BI Publisher
+-------------------------------------------------------------------------------------
+Creating Oracle reports 
+1.Create menu and custom reponsibility
+2.create Executable (Executable name , Application name , Executable method,File name
+3.Create concurrent programs (attach executable file and parameters)
+4.Create request group and attach Program name
+5.create responsibility (request group + data group +menu)
+6.create user and attach reponsibility
+------------------------------------------------------------------------------------------------
+Define executable , concurrent program , request group , responsibility ,menu ,profile option :
+
+what is executable ?
+its an object type which needs to get executed at the backend when the concurrent program 
+runs in Oracle Apps.
+
+What is concurrent program?
+Instance of Execution file along with parameters .
+
+What is request group ?
+A request security group is the collection of requests, 
+request sets, and 
+concurrent programs that a user is operating under a given responsibility.
+
+What is A responsibility ?
+A responsibility is a level of authority in Oracle Applications that lets you access only those 
+Oracle Applications functions and data appropriate to fulfill your role in an organization.
+Each user has at least one responsibility and multiple users can use same responsibility .
+
+What is menu?
+Menu is a list of the functions and submenus that are attached to a responsibility. 
+
+what is a form ?
+Form is a java plugin/user interface to insert/update/delete data into and from database.
+Application developer registers form function while developing forms
+
+Every responsibility will have a menu attached to it.
+
+What is a profile option in Oracle Apps ?
+
+In Oracle Apps, a profile option is a configurable setting that tells how the application behaves. 
+2 types of profile option.
+System profile options : it is set by the system administrator and not accessed by the regular user.
+User profile options:
+Four level of hierarchy in this level (SARU)
+Site (bigger range) , Application level , Responsibility level , User level(smaller range)
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1.ERP business areas : 
+Product planning , Sales , Marketing , Finance,Human resources , Procurement
+
+2.Functional Gaps : Difference b/w business requirements and Original ERP System is called Functional Gaps.
+
+3.End user of Erp System :
+Business users 
+Management/executives
+
+4.TCO: Total Cost Ownership.
+TCO = Starting cost + Operational cost
+Starting cost = Implementation + software + hardware
+Operational Cost = support and maintainence , bugs fixing, data backup and recovery.
+
+5.Customizations : Technical consultant modify the Functional gaps by adding new functionality to the Original ERP system , this step is called Customizations.
+New reports are craeted in this step.
+
+6.Interfaces: In Oracle Apps Interfaces are generally tables, which act as a medium to transfer the data from one module to another module or to transfer the data from legacy system into Oracle Applications. 
+There are 352 tables provided by the Oracle Package. Each module has its own Interface Tables.
+
+7.Migration : 3 sets of environment in ERP System ( Development + Testing + Production)
+Copying of configuration from one environment to another is called Migration.
+[ Migration = Transporting setup ]
+Developemt ----> Testing ----> Production
+
+data conversion
+
+8.What is Valueset ?
+-> A valueset is a list of values with validation that is used to restrict the user without entering the invalid in the parameter.
+A valueset is used in Concurrent program parameters , while defining flexfields.
+
+What are the different types of valuesets?
+
+Types of valuesets :
+1.Independent
+2.Dependent
+3.Subset
+4.Table
+5.Pair
+
+
+9.what is lookups ? with example.
+Lookups are the list of values in Oracle applications.
+Lookup types contains a set of lookup codes, each code's translated meaning.
+Example :
+Lookup type :Role_Cognizant
+
+LookupCode 		Meaning
+PA 			Programmer Analyst
+PAT 			Programmer Analyst Trainee
+GENC 			Generation in Cognizant
+M			Manager
+
+Lookup types:
+Standard lookup- Simplest form of lookup types with a lookup code with their meaning.
+Common lookup
+Set enabled lookup
+
+Why lookups?
+to provide validation or a list of values for a user input field in a user interface.
+
+What is flexfields?
+A flexfields is made of sub-fields and segments. 
+Types of flexfields are key flexfields and descriptive flexfields.
+
+Key flexfields :
+Key flexfields - KFF are the unique identifiers or contraints in EBS.KFF created meaningful codes fo various entities like Serial no of a product.
+Mandatory business information, stored in segments and displays like text item.
+Example :
+Oragnisation ABC is using a  Notebook Coded as HP_BW_14(meaning HP Notebook ,Color - Black and White , 14")
+Another organisation is using same notebook coded as HP_Notebook_14_BW
+
+Descriptive flexfields:
+DFF - Additional business information , stored in attributes , optional , diplays like [].
+Example:
+Suppose you’re entering employee details, 
+and you want to capture additional information like certifications, skills, or location, salary.
+
+----------------------------------------------------------------------------------------------------------------------------
+
+
+What is XML Publsiher?
+
+data model - rdf,xml,pdf
+layout(template) - rtf,excel,pdf
+
+Properties:
+Pure Java
+Pluggable data in XML
+Output format - PDF,XML,RTF,HTML
+Support for printing protocol
+Applications : MS Word , MS Excel ,Adobe Acrobat
+
+
+-> (BI Publisher)
+   -> It is also called Template Builder reports .
+template based publishing solution delivered with the Oracle ebuisness suite
+approach to design reports and publishing .
+custom templates with the concurrent request request data to generate output
+in Excel ,PDF, Chart format
+
+DAta logic/model + layout + translation  ----> reports output
+
+why XML Publsiher?
+-> 
+Oracle reports output in different languages , 
+reports in chart format, 
+report output in excel
+publishing the output in intranet/interet
+eliminating some columns from the reports.
+
+
+How to create XML publisher Report (with parameter) in Oracle apps R12 using data template Approach :
+
+Using PL-SQL and Report builder
+Steps (Using PL-SQL)
+1.Creating the data template.
+2.Go to the XML Publisher , go to data definition and attach data template in .xml format.
+3.executable  (XDODTEXE)
+
+	NB: XDODTEXE is java concurrent program used as a BI Publisher Data template Executable.
+4.create concurrent program attaching the parameters and add valuesets and output format in XML.
+5.attach this concurrent program in request group ( Application Developer reports) .
+6.run this program creating a new request and get the output (XML File)
+7.using xml file creating rtf template and attach in template section (XML Publishers)
+8.run this program.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+9.What is Oracle Workflow?
+Oracle workflow -> workflow management system .
+A workflow process consists of a sequence of activities that together make up a business flow, expressing your organization’s policies and rules. 
+The activities can include automated functions, notifications to users, sub processes and business events.
+
+example - 1. validate self-service transactions .
+	    2.automatically delivery notifications and notify when the work is done.
+
+
+Q.what are the Steps to design a report ???
+
+---------------------------------------------------------------------------------------------
+P2P Cycle 
+Ö2C Cycle
+plsql Collections 
+Bulk collections 
+dynamic sql
+update with cursor
+https://www.youtube.com/watch?v=Q3TsYSQ6-v0
+
+Forms and functions
+types of valusets 
+set of books , 3c in set of books
+Profile option
+flexfields types and use
+kff vs dff
+what is api 
+types of api
+register in bi publisher
+purchase order (PO) types
+pagebreak in word
+requisition types
+xml publisher tables 
+diff between apps and custom schema 
+triggers in bi publisher
+mandatory parameter in package
+token in concurrent program
+forms and reprts in aol
+error comes passed by exception
+what is sql loader
+what is schema
+
+workflow tables , debug in workflow
+----------------------------------------------------------------------------------------------
+Q.diference between kff vs dff :
+kff -> mandatory business information , stored in segments , displayed in text .
+in apps , 30 segment columns are reserved for kff's data.
+example. 
+dff -> additional business information , stored in attributes , dispalyed in  [ ].\
+you are entering employee details but you want to know certification, skills ,salary.
+in apps , 15 attribute columns are reserved for kff's data.
+
+
+Q.Types of valuesets:
+dependent
+independent
+table
+pair
+special
+
+
+Q.set of books:
+Collection of Charts of Accounts and Currency and Calendars is called Set Of Books.
+1.Charts of  account
+2.calendar
+3.currency
+
+
+
+Q.What is interface ?
+Communication between Original erp system and third party app (vendors/suppliers) is called interface.
+
+Q.refresh/cloning :
+copying of data from production environment to testing/ development environment is called refresh/cloning.
+
+Q.seeded api :
+Define: Seeded APIs are predefined interfaces provided by Oracle.
+Purpose: They allow developers to interact with Oracle Applications programmatically.
+Example: The fnd_user_pkg API includes a procedure called createuser, which is used to create a user login account.
+
+
+Q.what is api ?
+API - Application programming interface. It defines a set of rules and protocols for interaction.
+Examples of Api in oracle apps
+FND_PROGRAM.EXECUTABLE
+FND_PROGRAM.REGISTER
+FND_PROGRAM.PARAMETER
+FND_PROGRAM.ADD_TO_GROUP
+FND_REQUEST.SUBMIT_REQUEST
+FND_PROFILE.VALUE
+FND_PROFILE.GET
+
+
+Q.How to get the second parameter value based on the first parameter?
+-> $flex $value set name.
+
+
+Q.Requisition types
+Internal requsition:  example - no external resources
+Purchasing requsition: example - vendors/suppliers involved
+
+ 
+Q.Difference between apps and customs schema.
+Apps Schema : The APPS schema is a special schema within EBS. 
+It primarily consists of synonyms and does not allow the creation of tables directly within it.
+
+Custom schema : Custom schemas are user-defined schemas that can contain tables and other objects.
+Unlike the APPS schema, custom schemas allow the creation of tables.
+
+
+Q.Which are the kinds of report triggers?
+There are mainly five different kinds of report triggers available. They are:
+
+Before report
+After report
+Before parameter form
+After parameter form
+Between pages
+
+
+Q.What is rdf ?
+rdf - resource description framework.
+Oracle reports extension file name is rdf.
+
+Q.mandatory parameters in package .
+2 parameters(retcode, errbuff)
+retcode :{0,1,2} -> 0 - successfully run/compiled , 1 - warning , 2- error
+errbuff:to show error message in program and send the message in log file
+
+Q.token in concurrent program
+Token links to the parameter , transfer values towards reports builder , it is case-sensitive .
+
+Q.SQL loader - loads external files towards the oracle database.
+client send raw data.
+
+
+Q.difference between schema and databases
+Schema : A schema is a logical definition of a database .It includes information about tables , columns and relationships among the tables.
+A schema is defined using DDL.
+
+Databases :
+Databases means collection of related data .
+databases is dynamic as records is updated,inserted and delted.
+Database contains schema , records and constraints .
+Operations are performed using DML .
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+Q.Explain the P2P process flow?
+P2P Cycle:
+
+
+Steps -
+1.Creation of requisition : this is the first step in P2P(proceure to pay) cycle. the requisition is made by the inventory department to the purchasing dept 
+of company .now this requisition includes necessarry info about the product, description, price , quantity.
+
+tables - PO_requisition_headers_All
+	   PO_requisition_lines_All
+	   PO_req_distribution_All
+
+2.RFQ : 2nd step in p2p cycle . here purchaseing dept request for quotattion or RFQ 
+to different suppliers/vendors mentioning buyers price, product details,price.
+
+3.Quotation : 3rd step in p2p cycle, here different suppliers send quotation to the purchasing department mentioning the deals they can give.
+4.PO Creation : supose supplier - 1 is giving the best deals , so purchasing dept created a new purchase order (PO) to the supplier - 1.
+PO tables : PO_headers_All
+		PO_lines_All
+		po_distribution_All
+
+5.Receiveing items  : after getting the purchasing order details , supplier sends the goods/items to the inventory .
+tables : rcv_shipments_headers
+	   rvc_shipments_lines
+
+	
+6. creation OF RECEIPT : inventory create and send the receipts of all the goods receipt in inventory.
+7.invoice creation : supplier sends the invoice to the finance dept of company.
+
+ap_invoice_All
+ap_invoice_lines_All
+
+
+8.Payment : finance dept checks whther the invoices and receipts and if it is okay then make the payment.
+ap_bankaccounts_All
+ap_bank_branch
+
+9.Payment info transfer to GL : lastly all payment info is sent to the general ledger module (gl)
+gl_je_headers
+gl_je_lines
+
+Modules affected in P2P Cycle :
+1.Inventory module
+2.purchasing order (PO) module
+3.account payable module(AP)
+4.general ledger(GL)
+
+Digram (Notes)  -> Tables
+P2P Cycle:
+
+Requisiton tables:
+PO_Requisiton_headers_all
+PO_Requisiton_lines_all
+PO_Req_distribution_all
+
+Creation Of PO:
+PO_headers_all
+PO_lines_all
+PO_distribution_All
+
+
+Receiving item:
+RCV_shipment_headers
+RCV_shipment_lines
+
+PO Invoice creation:
+AP_invoice_all
+AP_invoice_lines_All
+
+
+payment:
+AP_bankAccounts_all
+AP_check
+AP_Bank_Branch
+
+
+Transfer to GL:
+GL_JE_HEADERS
+GL_JE_LINES
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------
+Sample Questions:
+
+1.What are the base tables that are affected when you create a P.O?
+PO__headers_all
+PO__lines_all
+PO__distribution_all
+
+
+2.What is a Purchase Requisition and define various requisitions?
+A purchase requisition is an internal document that signifies the intention to acquire goods or services for a business. Here’s how it works:
+
+Employee Request: When an employee or department needs to make a purchase, they fill out a purchase requisition form. This form includes details such as the product description, quantity, estimated price, and the reason for the purchase12.
+Review and Approval: The completed purchase requisition is then submitted for review and approval. Reviewers may include the employee’s line manager and the company’s central procurement or purchasing department. This step ensures that purchases align with guidelines and are necessary1.
+Purchase Order Creation: Once the purchase requisition is approved, the business issues a purchase order for the requested items. Unlike the requisition, a purchase order is a legally binding contract that outlines exactly what the business intends to buy and for how much money
+
+types of requisition:
+1.internal requisition
+2.Purchase requsition
+
+3.Purchase Requisition	v/s Purchase Order
+Internal request to make a purchase	Confirmation of an order
+Created by any employee	Created by the purchasing/procurement group
+Created at the start of the procurement process when an employee identifies a need	Created when the business is ready to place an order for goods or services
+Contains information such as date of requisition, requisition number, requester’s name and department, products/services requested, and suggested vendor	Includes details like purchase order number, buyer’s name (business), and description of goods and services being purchased
+
+
+
+
+4.Purchase Order types : (4 types)
+Standard Purchase Order: You generally create standard purchase orders for a one-time purchase of various items. 
+You create standard purchase orders when you know the details of the goods or services you require, 
+estimated costs, quantities, delivery schedules, and accounting distributions.
+
+Planned PO: A planned purchase order is a long-term agreement committing to buy items or services from a single source.
+EX: Buying goods for Christmas from a specific dealer.
+
+Contract Purchase Orders:
+For this type of order, the buyer and seller will have to sign a contract stating the purchase terms and 
+conditions before a purchase order regarding the contract is issued.
+
+Blanket PO:
+You create blanket purchase agreements when you know the detail of goods or services you plan to buy from a specific supplier in a period, 
+but you do not yet know the detail of your delivery schedules. 
+
+
+5.What is Cursor and its attributes ?
+Define Implicit and Explicit Cursors.
+A cursor is a pointer that points to a result of a query.
+2 types Implicit and Explicit.
+
+implicit vs explicit cursors
+
+Attributes in cursor:
+Each cursor has a set of attributes that enables an application program to test the state of the cursor.
+These attributes are %ISOPEN, %FOUND, %NOTFOUND, and %ROWCOUNT.
+
+
+function vs procedure
+https://www.geeksforgeeks.org/difference-between-function-and-procedure/
+
+6.How do i submit a concurrent request from PL/SQL?
+PL/SQL procedures can submit a request to run a program as a concurrent process by calling FND_REQUEST.SUBMIT_REQUEST
+
+
+7.How do you “write” to the concurrent request Log and Output file?
+fnd_file.put_line(FND_FILE.LOG,'In the log file');
+fnd_file.put_line(FND_FILE.OUTPUT,'In the output file');
+
+8.How to break the page in specific condition? 
+a. Using word document page break 
+b. <?split-by-page-break:?>
+
+9.What are the XML publisher backend tables?
+"XDO_DS_DEFINITIONS_B
+XDO_DS_DEFINITIONS_TL
+XDO_DS_DEFINITIONS_VL
+XDO_LOBS
+XDO_TEMPLATES_B
+XDO_TEMPLATES_TL
+XDO_TEMPLATES_VL"
+
+10.oracle reports disadvantages :
+oracle reports is in black-white color and in text form but using xml publsiher we can get output in different forms (pdf/charts,graphics,color)
+
+11.How to submit a layout in the backend?  
+using API : fnd_request.add_layout
+
+12.What is Data Template and Layout Template?
+Data Template is an xml file consisting of data properties,parameter,query,structure and connects the CP to the xml publsiher through shortname
+Layout template  : upload the .rtf file , data template in different languages 
+data template name  = layout templte codename
+
+13.What are the various sections in the data template? 
+Parameters , Dataquery, dataStructure,Triggers,properties
+
+
+14.How do you migrate layout or data template across instances? 
+
+FNDLOAD and XDOLoader are utilities provided in Oracle Apps to download/upload 
+AOL object definition and template (RTF, PDF, and XSL-FO), XML, and XSD files to the XML Publisher database tables.
+
+
+what is the file supporting the translation for a layout template? 	
+XLIFF template(xml based bitext format)
+xml - xtensible markup language
+
+15.What triggers are supported in Data template?	
+Before Report and After report
+
+16.How to get the second parameter value based on the first parameter
+$flex$ value set name.
+
+
+17.Bind Variables:
+Bind variables are part of the database and are used in SQL queries and PL/SQL code.
+Placeholders: They act as placeholders for values within the query.
+SELECT * FROM orders WHERE order_id = :ord;
+The :ord is a bind variable. It allows you to supply different values for order_id without requiring a new hard parse for each value.
+
+
+lookup vs valuesets
+triggers vs procedure
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+Sql and PL SQL notes:
+
+PL/SQl - Procedural Langauge Extension for Structured Query Language(SQL).
+
+Properties -
+1.platform independent
+2.block structured language 
+3.better performance as compared to SQL , processes multiple SQL statements at the same time as one block
+4.pl/sql provides error and exception handling.
+
+Comaparisons (SQL vs PL/SQL) -
+https://www.geeksforgeeks.org/difference-between-sql-and-plsql/
+
+Javatpoint:
+PlSql Cursors,Types of cursors
+PlSql function, Procedure,Triggers ,Packages (Specifications and body )
+implicit and Explicit cursors in plsql 
+
+
+
+
+drop,truncate, delete difference in sql
+ddl vs dml 
+sql commands types ( 4 types : ddl , dml, dcl, tcl)
+normalization , denormalization, dbms, database 
+database creation syntax :
+create database if not exist db_name;
+
+ddl commands(create , alter, drop,truncate,rename)
+dml command(insert,update,delete)
+dcl(grant,revoke)
+tcl(start transaction , commit ,rollback,savepoint)
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+safe-precautions:
+https://career.guru99.com/top-50-oracle-applications-interview-questions/
+https://mindmajix.com/oracle-applications-technical-interview-questions
+https://mindmajix.com/oracle-workflow-interview-questions
+https://tekslate.com/oracle-apps-technical-interview-questions
+https://docs.oracle.com/cd/A60725_05/html/comnls/us/fnd/values20.htm
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+Oracle Workflow:
+A workflow process consists of a sequence of activities that together make up a business flow, 
+expressing your organization’s policies and rules. The activities can include automated functions, 
+notifications to users, sub processes and business events.
+
+Examples:
+Automatically delivering notifications and reminders of work to be done.
+Step through daily transaction flows
+
+Event : An event is an acitvity that takes place inside the system.
+Event subcription : list of actions attached to any event is called event subcription.
+business event system : an application service to communicate between 2 business events.
+desciption:
+system -> inbound -> workflow engine ,notification engine -> advanced queuing -> actions attaced then workflow engine -> advance queueing -> outbound -> system.
+messages stored and transmitted using oracle net services , http , smtp(simple mail transfer protocol)
+
+oracle workflow builder : a graphical tool to manage workflow process 
+define and customize workflow definition
+2 parts ( object navigator + process diagram)
+icons -> activities , transition -> arrows
+
+item key,itemtype,attribute (txt,number,lookup types)
+persistence : it controls how long records should be maintained 
+
+temporary : need to mention number of days 
+permanent: indefinite amount of times and to purge it we need to write  a procedure WF_Purge.totalrem()
+
+cost: number of seconds need to execute an activity is called cost in oracle workflow builder.
+default value / threshold value -> 1/5000 times of a second 
+cost range : 0 - 1lakh second
+required cost > default value   -> DEFERRED STATE 
+
+notification mailer : a program used in oracle workflow builder to send remiander and notifications .
+
+access level : it defines whether the user can modify the workflow data.
+0 - 9: oracle workflow
+10 - 19 : oracle aol
+20 - 99 : oracle application development
+100 - 999: customer organzisation
+1000 :
+public
+
+
+workflow engine :
+it is embedded in oracle database .
+monitors and execute all the activity from start to the end 
+starts with the start activity whether it is function,notification and process.
+
+
+procedure procedure_name (
+itemkey in varchar2,
+itemtype in varchar2,
+actiid in number,
+funcmode in varchar2
+result out varchar2
+);
+
+to initiate a workflow process :
+WF_ENGINE.createprocess and WF_ENGINE.startprocess
+OR 
+WF_ENGINE.launchprocess
+
+commit/rollback  - AUTONOMOUS_TRANSACTION
+
+3 VIEWS in directory services :
+WF_USERROLES
+WF_USERS
+WF_ROLES
+
+oracle workfloe builder: integrated in oracle workflow database, uses to transfer process definition bwteen a file and a database.
+retry wf : it is used to fix/debug workflow users happend due to server fault.
+
+workflow tables:
+wf_events
+wf_eventssubcription
+wf_notification
+wf_messages
+wf_items
+wf_activities
+wf_error
+wf_deferred
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+https://www.geeksforgeeks.org/difference-between-trigger-and-procedure-in-dbms/
+
+
+valuesets vs lookups 
+valuesets -> it can contain duplicate values but lookups didnot contain any duplicate values
+valuesets can be used in concurrent program parameters but lookups cant
+valusets are maintained by systm administartor , lookups are maintained by users
+valuesets are are dynamic but lookups are static 
+
+
+Independent vs dependent valuests with examples.
+
+independent - > country names
+dependent -> city names under each country
+
+Independent value sets are standalone and not linked to any other value set.
+Each value in an independent value set is self-contained and doesn’t rely on other values.
+
+Dependent valuesets :
+Dependent value sets are linked to another value set, known as the parent value set.
+
+interfaces : data conversion between external systems and oracle appliacitons. ( transfer of data )
+types of interfaces - 
+1.interbound interface: dtaa transfer from external system to Oracle applications.
+2.outerbound interface : data transfer from oracle apps to external system.
+3.open interfaces : when oracle apps provide the interface logic it is called open interface 
+
+
+integration in oracle apps: data and info get transferred bwteeen from one ebs module to another module 
+Example : AP to GL, AR to GL
+
+data conversion:
+Data conversion in Oracle Apps refers to the process of migrating data 
+from legacy or existing systems to a fresh implementation of Oracle Applications.
+
+
+
+--------------------------------------------------------------------------------------------------------------------
+Good afternoon Sir/madam
+Hello,I am Sourik Pan, I am from kolkata in west bengal.
+I have done Btech from Academy of technology in Computer Science and Engineering department .
+Prsently I am working as  a csd intern at cognizant.
+My domain is Oracle EBS.
+So, coming to the Oracle EBS I am learning Sql,PLsql , Oracle EBS, Oracle Apps,AOL Module, p2p Cycle ,xml publisher,oracle workflow builder,o2c,conversion and interface
+As a a part of my training I did project on Xml publisher report publishing , Get all employee details repspect to desgination, 
+preparing controlfile to run sql loader program.
+ thankyou .
+
+
+
+
+
+
+
+
+integration & data conversion
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+O2C Cycle(Order to Cash Cycle):
+
+Involved Modules
+Order Management: Creating and shipping the Order
+Inventory:  Onhand availability, Reservation
+Receivables: For Receipt against invoice
+General Ledger: Importing, entering and posting the journals.
+
+
+• 	Enter the Sales Order :
+Tables Affected:
+OE_ORDER_HEADERS_ALL
+OE_ORDER_LINES_ALL
+
+Columns used for identification of flow
+FLOW_STATUS_CODE in both the tables which is ENTERED.
+
+
+
+•	Book the Sales Order:
+
+The FLOW_STATUS_CODE in the table OE_ORDER_HEADERS_ALL would be BOOKED.
+The FLOW_STATUS_CODE in OE_ORDER_LINES_ALL will be AWAITING_SHIPPING.
+New records will be created in WSH_DELIVERY_DETAILS with RELEASED_STATUS=’R’ (Ready to Release)
+Also Record(s) will be inserted into WSH_DELIVERY_ASSIGNMENTS
+
+
+•	Launch Pick Release:
+WSH_DELIVERY_ASSIGNMENTS
+
+
+WSH_NEW_DELIVERIES
+
+
+•	Ship Confirm:
+RELEASED_STATUS in WSH_DELIVERY_DETAILS would be ‘C’ (Ship Confirmed)
+FLOW_STATUS_CODE in OE_ORDER_HEADERS_ALL would be “BOOKED“
+FLOW_STATUS_CODE in OE_ORDER_LINES_ALL would be “SHIPPED“
+
+•	Create Invoice
+•	Create Receipt
+•	Transfer to General Ledger
+•	Journal Import
+•	Posting
+
+Invoice send :
+RA_CUSTOMER_TRX_ALL (invoices header info)
+RA_CUSTOMER_TRX_LINES_ALL(invoices lines info)
+
+Create receipt:
+AR_CASH_RECEIPTS_ALL
+
+
+Transfer to General Ledger:
+GL_INTERFACE
+
+
+Journal Import:
+To transfer the data from General Ledger Interface table to General Ledger, run the Journal Import program from Oracle General Ledger.
+GL_JE_BATCHES, GL_JE_HEADERS, GL_JE_LINES
+
+Posting:
+We have to Post journal batches that we have imported previously to update the account balances in General Ledger
+
+
+
+select * from apps.oe_order_headers_all where order_number = 69505;
+
+select * from apps.oe_order_lines_All where header_id = 385942;
+select distinct flow_status_code from apps.oe_order_headers_All;
+
+select flow_status_code from apps.oe_order_headers_all where order_number = 69505;
+select   flow_status_code from apps.oe_order_lines_All where header_id = 385942;
+
+select *  from apps.ra_customer_trx_All where trx_number = '1000002';
+select *  from apps.ra_customer_trx_lines_All where customer_trx_id = '906933';
+select * from apps.ar_cash_receipts_All;
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Steps:
+ 
+Responsibilty 
+Order management Super user(usa)
+Receivables Vision Operation(usa)
+ 
+Enter sales order :
+Order management Super user(usa)  -> Order,Returns -> sales orders -> customer + ORDER type , Line items(quantity, item details)
+ 
+Book order :
+Order,Returns -> sales orders  -> Order number -> Book Order
+ 
+Pick Release :
+Shipping -> release sales order -> order -> orderNo -> 
+shipping -> autopack delivery ,autocreate delivery ,  autopick confirm
+inventory -> auto allocate 
+EXECUTE_NOW
+ 
+Transaction -> transaction -> order no
+
+-------------------------------------------------------------------------------------------------------------------------------------
+sql commands:
+create table employee( empid number(5) , empname varchar2(20) , location varchar2(50),orderid number(5));
+alter table employee add column salary number(10);
+alter table employee modify salary number(15);
+select max(Salary) from employee where salary < (select max(Salary) from employee);
+
+select empid,count(orderid)
+from employee 
+group by empid
+having count(orderid) > 1;
+
+alter table employee rename column empid to employee_no ;
+
+------------------------------------------------------------------------------------------------------------------------------------

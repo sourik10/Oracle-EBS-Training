@@ -1,0 +1,54 @@
+
+
+
+(HR Schema)
+1) Write procedure to display the number of department to the location_id as 
+'Number of Department in location id 50 is 5' by pass the argument to procedure as location_id with named as deptcount(loc number).
+If no department to location_id then raise the user exception to display "No department function in that Location"
+
+
+2) Write the procedure to copy the manager record from employees table and move records to managers table. 
+Procedure is named with mgremp and display the "Number of record is copied is" if not then "No record insert into manager" 
+using the basic loop with cursor.
+	
+
+
+3) Write a function to calculate the total salary by salary*commission and  
+deduction of professional tax of 6% from total salary if total salary is greater than or equal to $15000 and 
+less than 15000 is 2.5%. function named as salcal with two parameter of salary and commission.
+
+
+
+4) Write trigger on emp table for the event of update to column of salary. 
+when the salary is update to emp table stored old salary into empoldsal table. 
+Display 'Record is inserted into empoldsal'.
+
+
+5) write the package named as PKG_dept_info which contains the two procedure. 
+    a)Procedure named EmpCount where to display the department_name and number of employee in each department.
+    b)Procedure name SalDept where to display the departmentname, total_salary  and average_salary of each departments
+
+
+SQL
+--------
+
+1 ) Display the employees, with employeeid, firstname, job_id, salary and hike_salary, where 
+hike_salary is 20% hike from there salary and display only emp who get salary >10000 after salary hiked
+
+2) Display the employee_id, first_name, department_name, job_id and city. 
+Only from department_id of 30,50,70,90 and sort based on firstname of employee 
+
+3) Display the all departments with department_name and number of employees from each department 
+      as 'NO_Emp'. Irrespective of  department have employee or not. sort based on no_emp as descending order. 
+
+4) Display the jobid and number of employees as No_Emps. 
+display only  the jobId which has maximum no_emps number employees  sort record based on job_id 
+
+5) write sql query to display the employee_id, first_name, job_id and salary , who is working in the department name of "IT"
+
+6) Write the SQL query to display the managers with there employee_id as
+ Manager_id ,first_name as Manager_NAme, 	job_id and department_id and sort by manager_id.
+
+
+
+
