@@ -1,0 +1,1 @@
+select CHARACTER_COUNT('abcde') from dual;
