@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataTemplate name="PROJECT_REPORT" description="Purchase Order Report" version="1.0">
+<properties>
+<property name="include_null_Element" value="false"/>
+</properties>
+<dataQuery>
+<sqlStatement name="Q1">
+<![CDATA[SELECT P1.SEGMENT1 AS "PO_Number",P1.TYPE_LOOKUP_CODE AS "PO_Type",P2.VENDOR_NAME AS "Vendor_Name",
+P1.CREATION_DATE AS "PO_Creation_Date" FROM apps.po_headers_all P1 JOIN apps.ap_suppliers P2 ON P1.vendor_id=P2.vendor_id
+WHERE SYSDATE-P1.CREATION_DATE<=30]]>
+</sqlStatement>
+</dataQuery>
+<dataStructure>
+<group name="PROJECT_DATA" source="Q1">
+<element name="PO_Number" value="PO_Number"/>
+<element name="PO_Type" value="PO_Type"/>
+<element name="Vendor_Name" value="Vendor_Name"/>
+<element name="PO_Creation_Date" value="PO_Creation_Date"/>
+</group>
+</dataStructure>
+</dataTemplate>
