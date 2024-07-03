@@ -1,0 +1,63 @@
+O2C Cycle(Order to Cash Cycle):
+
+Involved Modules
+Order Management: Creating and shipping the Order
+Inventory:  Onhand availability, Reservation
+Receivables: For Receipt against invoice
+General Ledger: Importing, entering and posting the journals.
+
+
+• 	Enter the Sales Order :
+Tables Affected:
+OE_ORDER_HEADERS_ALL
+OE_ORDER_LINES_ALL
+
+Columns used for identification of flow
+FLOW_STATUS_CODE in both the tables which is ENTERED.
+
+
+
+•	Book the Sales Order:
+
+The FLOW_STATUS_CODE in the table OE_ORDER_HEADERS_ALL would be BOOKED.
+The FLOW_STATUS_CODE in OE_ORDER_LINES_ALL will be AWAITING_SHIPPING.
+New records will be created in WSH_DELIVERY_DETAILS with RELEASED_STATUS=’R’ (Ready to Release)
+Also Record(s) will be inserted into WSH_DELIVERY_ASSIGNMENTS
+
+
+•	Launch Pick Release:
+WSH_DELIVERY_ASSIGNMENTS
+
+
+WSH_NEW_DELIVERIES
+
+
+•	Ship Confirm:
+RELEASED_STATUS in WSH_DELIVERY_DETAILS would be ‘C’ (Ship Confirmed)
+FLOW_STATUS_CODE in OE_ORDER_HEADERS_ALL would be “BOOKED“
+FLOW_STATUS_CODE in OE_ORDER_LINES_ALL would be “SHIPPED“
+
+•	Create Invoice
+•	Create Receipt
+•	Transfer to General Ledger
+•	Journal Import
+•	Posting
+
+Invoice send :
+RA_CUSTOMER_TRX_ALL (invoices header info)
+RA_CUSTOMER_TRX_LINES_ALL(invoices lines info)
+
+Create receipt:
+AR_CASH_RECEIPTS_ALL
+
+
+Transfer to General Ledger:
+GL_INTERFACE
+
+
+Journal Import:
+To transfer the data from General Ledger Interface table to General Ledger, run the Journal Import program from Oracle General Ledger.
+GL_JE_BATCHES, GL_JE_HEADERS, GL_JE_LINES
+
+Posting:
+We have to Post journal batches that we have imported previously to update the account balances in General Ledger
