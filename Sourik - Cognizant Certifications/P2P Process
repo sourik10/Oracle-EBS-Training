@@ -1,0 +1,78 @@
+P2P Cycle:
+
+
+Steps -
+1.Creation of requisition : this is the first step in P2P(proceure to pay) cycle. the requisition is made by the inventory department to the purchasing dept 
+of company .now this requisition includes necessarry info about the product, description, price , quantity.
+
+tables - PO_requisition_headers_All
+	   PO_requisition_lines_All
+	   PO_req_distribution_All
+
+2.RFQ : 2nd step in p2p cycle . here purchaseing dept request for quotattion or RFQ 
+to different suppliers/vendors mentioning buyers price, product details,price.
+
+3.Quotation : 3rd step in p2p cycle, here different suppliers send quotation to the purchasing department mentioning the deals they can give.
+4.PO Creation : supose supplier - 1 is giving the best deals , so purchasing dept created a new purchase order (PO) to the supplier - 1.
+PO tables : PO_headers_All
+		PO_lines_All
+		po_distribution_All
+
+5.Receiveing items  : after getting the purchasing order details , supplier sends the goods/items to the inventory .
+tables : rcv_shipments_headers
+	   rvc_shipments_lines
+
+	
+6. creation OF RECEIPT : inventory create and send the receipts of all the goods receipt in inventory.
+7.invoice creation : supplier sends the invoice to the finance dept of company.
+
+ap_invoice_All
+ap_invoice_lines_All
+
+
+8.Payment : finance dept checks whther the invoices and receipts and if it is okay then make the payment.
+ap_bankaccounts_All
+ap_bank_branch
+
+9.Payment info transfer to GL : lastly all payment info is sent to the general ledger module (gl)
+gl_je_headers
+gl_je_lines
+
+Modules affected in P2P Cycle :
+1.Inventory module
+2.purchasing order (PO) module
+3.account payable module(AP)
+4.general ledger(GL)
+
+Digram (Notes)  -> Tables
+P2P Cycle:
+
+Requisiton tables:
+PO_Requisiton_headers_all
+PO_Requisiton_lines_all
+PO_Req_distribution_all
+
+Creation Of PO:
+PO_headers_all
+PO_lines_all
+PO_distribution_All
+
+
+Receiving item:
+RCV_shipment_headers
+RCV_shipment_lines
+
+PO Invoice creation:
+AP_invoice_all
+AP_invoice_lines_All
+
+
+payment:
+AP_bankAccounts_all
+AP_check
+AP_Bank_Branch
+
+
+Transfer to GL:
+GL_JE_HEADERS
+GL_JE_LINES
